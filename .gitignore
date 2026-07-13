@@ -1,0 +1,100 @@
+# Build outputs
+/build/
+/build-*/
+/cmake-build-*/
+/out/
+/dist/
+
+# Accidental in-source CMake/Ninja build
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/CTestTestfile.cmake
+/Makefile
+/build.ninja
+/.ninja_deps
+/.ninja_log
+/install_manifest.txt
+/Testing/
+
+# Local CMake configuration
+CMakeUserPresets.json
+compile_commands.json
+
+# C/C++ artifacts
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.dSYM/
+*.debug
+
+# Qt and Qt Creator
+/.qt/
+/.qtc_clangd/
+*.user
+*.user.*
+*.autosave
+.qmlls.ini
+
+# VS Code
+/.vscode/*
+!/.vscode/extensions.json
+!/.vscode/settings.json
+!/.vscode/tasks.json
+!/.vscode/launch.json
+
+# Other IDEs
+/.idea/
+/.cache/
+
+# Tests and coverage
+/coverage/
+*.gcda
+*.gcno
+*.gcov
+*.profraw
+*.profdata
+lcov.info
+coverage.info
+
+# Runtime artifacts
+/logs/
+*.log
+*.pid
+*.sock
+core
+core.*
+vgcore.*
+
+# Local configuration and secrets
+/local/
+/secrets/
+/vpn-profiles/
+
+.env
+.env.*
+!.env.example
+
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Generated packages
+*.rpm
+*.src.rpm
+*.deb
+*.AppImage
+
+# Editor and OS noise
+*.swp
+*.swo
+*~
+.DS_Store
+.directory
+Thumbs.db
