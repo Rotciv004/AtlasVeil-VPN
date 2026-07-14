@@ -1,100 +1,88 @@
-# Build outputs
+# Build trees
 /build/
-/build-*/
-/cmake-build-*/
 /out/
-/dist/
+/cmake-build-*/
 
-# Accidental in-source CMake/Ninja build
-/CMakeFiles/
-/CMakeCache.txt
-/cmake_install.cmake
-/CTestTestfile.cmake
-/Makefile
-/build.ninja
-/.ninja_deps
-/.ninja_log
-/install_manifest.txt
-/Testing/
-
-# Local CMake configuration
-CMakeUserPresets.json
+# In-source CMake and Ninja output
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+DartConfiguration.tcl
+Makefile
+build.ninja
+rules.ninja
+.ninja_deps
+.ninja_log
 compile_commands.json
+install_manifest.txt
 
-# C/C++ artifacts
+# Local CMake overrides
+CMakeUserPresets.json
+
+# Qt-generated files
+*_autogen/
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+*.qrc.depends
+.qmake.stash
+
+# Compiled output
 *.o
 *.obj
 *.a
 *.so
 *.so.*
-*.dylib
 *.dll
+*.dylib
 *.exe
-*.dSYM/
-*.debug
-
-# Qt and Qt Creator
-/.qt/
-/.qtc_clangd/
-*.user
-*.user.*
-*.autosave
-.qmlls.ini
-
-# VS Code
-/.vscode/*
-!/.vscode/extensions.json
-!/.vscode/settings.json
-!/.vscode/tasks.json
-!/.vscode/launch.json
-
-# Other IDEs
-/.idea/
-/.cache/
 
 # Tests and coverage
-/coverage/
+Testing/
+coverage/
 *.gcda
 *.gcno
 *.gcov
 *.profraw
 *.profdata
-lcov.info
-coverage.info
 
-# Runtime artifacts
-/logs/
+# Editor and tooling state
+.cache/
+.clangd/
+.vscode/
+.idea/
+*.user
+*.user.*
+*.kdev4
+*~
+
+# Runtime output
 *.log
-*.pid
-*.sock
-core
-core.*
-vgcore.*
+/core
+/core.*
 
-# Local configuration and secrets
-/local/
-/secrets/
-/vpn-profiles/
-
+# Local environment
 .env
 .env.*
 !.env.example
 
+# VPN configurations and credentials
+*.conf
+*.ovpn
 *.key
 *.pem
 *.p12
 *.pfx
+/secrets/
+/profiles/private/
 
-# Generated packages
-*.rpm
-*.src.rpm
-*.deb
-*.AppImage
-
-# Editor and OS noise
+# Temporary editor files
 *.swp
 *.swo
-*~
+
+# Operating-system files
 .DS_Store
-.directory
 Thumbs.db
