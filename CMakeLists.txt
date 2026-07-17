@@ -7,7 +7,7 @@ project(
     LANGUAGES CXX
 )
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -36,6 +36,7 @@ find_package(
         QQC2DesktopStyle
 )
 
+include(QtVersionOption)
 ecm_find_qmlmodule(org.kde.kirigami REQUIRED)
 qt_standard_project_setup(REQUIRES 6.7)
 
@@ -50,9 +51,12 @@ qt_add_executable(atlasveil
     src/network/NetworkManagerAdapter.hpp
 )
 
+set_source_files_properties(qml/Main.qml PROPERTIES QT_RESOURCE_ALIAS Main.qml)
+
 qt_add_qml_module(atlasveil
     URI AtlasVeil
     VERSION 1.0
+    NO_IMPORT_SCAN
     QML_FILES
         qml/Main.qml
 )

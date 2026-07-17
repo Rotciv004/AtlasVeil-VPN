@@ -76,6 +76,12 @@ coverage/
 *.pem
 *.p12
 *.pfx
+*.crt
+*.cer
+*.csr
+*.der
+*.p7b
+*.p7c
 /secrets/
 /profiles/private/
 

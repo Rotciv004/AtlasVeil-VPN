@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=AtlasVeil
+Comment=Connect to existing WireGuard profiles
+Exec=atlasveil
+Icon=network-vpn
+Terminal=false
+Categories=Network;Security;
+Keywords=VPN;WireGuard;NetworkManager;
+StartupNotify=true
